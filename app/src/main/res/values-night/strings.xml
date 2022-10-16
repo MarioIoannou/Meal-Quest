@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recipes">Recipes</string>
+    <string name="my_fridge">My Fridge</string>
+    <string name="saved_recipes">Saved Recipes</string>
+    <string name="food_facts">Food Facts</string>
+    <string name="info_about_diets"><u>Click <font color="#E44745">Here</font> for more information about diets.</u></string>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/recipesFragment">
+
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.marioioannou.mealquest.ui.fragments.FavouriteFragment"
+        android:label="Saved Recipes"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.marioioannou.mealquest.ui.fragments.recipesfragment.RecipesFragment"
+        android:label="Recipes"
+        tools:layout="@layout/fragment_recipes" >
+        <action
+            android:id="@+id/action_recipesFragment_to_recipesBottomSheet"
+            app:destination="@id/recipesBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/fridgeFragment"
+        android:name="com.marioioannou.mealquest.ui.fragments.FridgeFragment"
+        android:label="My Fridge"
+        tools:layout="@layout/fragment_fridge" />
+    <fragment
+        android:id="@+id/triviaFragment"
+        android:name="com.marioioannou.mealquest.ui.fragments.TriviaFragment"
+        android:label="Food Facts"
+        tools:layout="@layout/fragment_trivia" />
+    <fragment
+        android:id="@+id/dietInfoFragment"
+        android:name="com.marioioannou.mealquest.ui.fragments.DietInfoFragment"
+        android:label="Diet Information"
+        tools:layout="@layout/fragment_diet_info" >
+        <action
+            android:id="@+id/action_dietInfoFragment_to_recipesBottomSheet"
+            app:destination="@id/recipesBottomSheet" />
+    </fragment>
+    <dialog
+        android:id="@+id/recipesBottomSheet"
+        android:name="com.marioioannou.mealquest.ui.fragments.recipesfragment.bottomsheet.RecipesBottomSheet"
+        android:label="recipes_bottom_sheet"
+        tools:layout="@layout/recipes_bottom_sheet" >
+        <action
+            android:id="@+id/action_recipesBottomSheet_to_recipesFragment"
+            app:destination="@id/recipesFragment" />
+        <action
+            android:id="@+id/action_recipesBottomSheet_to_dietInfoFragment"
+            app:destination="@id/dietInfoFragment" />
+    </dialog>
+</navigation>
