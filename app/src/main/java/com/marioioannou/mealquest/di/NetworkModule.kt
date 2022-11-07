@@ -23,6 +23,7 @@ object NetworkModule {
     @Provides
     fun provideOkHttpClient() : OkHttpClient {
         val loggingInterceptor = HttpLoggingInterceptor()
+        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
         return OkHttpClient.Builder()
             .readTimeout(15,TimeUnit.SECONDS)
             .connectTimeout(15,TimeUnit.SECONDS)
@@ -54,5 +55,4 @@ object NetworkModule {
     fun provideApiService(retrofit: Retrofit): FoodRecipesApi {
         return retrofit.create(FoodRecipesApi::class.java)
     }
-
 }

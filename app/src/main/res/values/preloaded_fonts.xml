@@ -2,7 +2,9 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/ceviche_one</item>
+        <item>@font/concert_one</item>
         <item>@font/courgette</item>
+        <item>@font/crete_round</item>
         <item>@font/margarine</item>
     </array>
 </resources>

@@ -3,7 +3,7 @@ package com.marioioannou.mealquest.di
 import android.content.Context
 import androidx.room.Room
 import com.marioioannou.mealquest.utils.Constants
-import com.marioioannou.mealquest.domain.database.RecipesDatabase
+import com.marioioannou.mealquest.domain.database.recipes_database.RecipesDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,7 +23,7 @@ object DatabaseModule {
         context,
         RecipesDatabase::class.java,
         Constants.DATABASE_NAME
-    ).build()
+    ).fallbackToDestructiveMigration().build()
 
     @Singleton
     @Provides

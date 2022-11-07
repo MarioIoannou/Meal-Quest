@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.recipesfragment.RecipesFragment">
+    tools:context=".ui.fragments.recipes_fragment.RecipesFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_recipes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        tools:listitem="@layout/recipes_layout_row_new"/>
+        tools:listitem="@layout/recipes_layout_row_4"/>
 
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmer_frag_recipes_rv"
@@ -27,7 +27,7 @@
         app:layout_constraintVertical_bias="0.5"
         tools:visibility="gone">
 
-        <include layout="@layout/shimmer_recyclerview" />
+        <include layout="@layout/shimmer_recyclerview_small_items" />
 
     </com.facebook.shimmer.ShimmerFrameLayout>
 
@@ -47,16 +47,16 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:alpha="0.3"
-            android:src="@drawable/baseline_sentiment_very_dissatisfied_black_24dp"
+            android:src="@drawable/no_internet"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.35000002" />
+            app:layout_constraintVertical_bias="0.35000002"/>
 
         <TextView
             android:id="@+id/textView"
@@ -67,6 +67,7 @@
             android:text="No internet connection"
             android:textSize="25sp"
             android:textStyle="bold"
+            android:textColor="@color/my_orange_1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintHorizontal_bias="0.496"
@@ -85,7 +86,7 @@
         android:layout_marginBottom="24dp"
         android:clickable="true"
         android:src="@drawable/baseline_restaurant_black_24dp"
-        app:backgroundTint="@color/my_blueish"
+        app:backgroundTint="@color/my_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

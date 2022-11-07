@@ -6,4 +6,7 @@
     <string name="saved_recipes">Saved Recipes</string>
     <string name="food_facts">Food Facts</string>
     <string name="info_about_diets"><u>Click <font color="#E44745">Here</font> for more information about diets.</u></string>
+    <string name="add_ingredients">Add ingredients</string>
+    <string name="delete_all">Delete all</string>
+    <string name="vegan_name">VEGAN</string>
 </resources>
