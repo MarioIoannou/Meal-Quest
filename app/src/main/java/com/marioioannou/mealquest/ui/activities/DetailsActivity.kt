@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import androidx.navigation.navArgs
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.marioioannou.mealquest.R
 import com.marioioannou.mealquest.adapters.PagerAdapter
@@ -47,7 +48,7 @@ class DetailsActivity : AppCompatActivity() {
 
         val titles = ArrayList<String>()
         titles.add("Overview")
-        titles.add("Used ingredients")
+        titles.add("Ingredients")
         titles.add("Instructions")
 
         val resultBundle = Bundle()
@@ -58,9 +59,16 @@ class DetailsActivity : AppCompatActivity() {
             fragments,
             this
         )
-        binding.viewPager2.isUserInputEnabled = false
+
+        //binding.viewPager2.isUserInputEnabled = false
         binding.viewPager2.apply {
+            offscreenPageLimit = 3
             adapter = pagerAdapter
+            orientation = ViewPager2.ORIENTATION_HORIZONTAL
+            //setCurrentItem(3,true)
+            beginFakeDrag()
+            fakeDragBy(-10f)
+            endFakeDrag()
         }
 
         TabLayoutMediator(binding.tabLayout, binding.viewPager2) { tab, position ->

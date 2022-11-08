@@ -50,7 +50,7 @@ object Constants {
     const val INGREDIENTS_TABLE = "ingredients_table"
 
     //Bottom Sheet and Preferences
-    const val DEFAULT_RECIPES_NUMBER = "50"
+    const val DEFAULT_RECIPES_NUMBER = "10"
     const val DEFAULT_MEAL_TYPE = "main course"
     const val DEFAULT_CUISINE_TYPE = "all"
     const val DEFAULT_DIET_TYPE = "all"
