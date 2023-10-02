@@ -5,15 +5,25 @@
     <item
         android:id="@+id/menu_add_ingredients"
         android:title="@string/add_ingredients"
-        android:icon="@drawable/ic_add"
+        android:icon="@drawable/add"
+        app:iconTint="@color/my_blue"
         app:showAsAction="ifRoom"
-        android:iconTint="@color/my_orange_1"/>
+        />
 
     <item
         android:id="@+id/menu_delete_ingredients"
         android:title="@string/delete_all"
-        android:icon="@drawable/ic_delete"
+        android:icon="@drawable/delete_bucket"
+        app:iconTint="@color/red"
         app:showAsAction="ifRoom"
-        android:iconTint="@color/red"/>
+       />
+
+    <item
+        android:id="@+id/menu_settings"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_baseline_settings"
+        app:iconTint="@color/theme_primary"
+        app:showAsAction="ifRoom"
+        />
 
 </menu>

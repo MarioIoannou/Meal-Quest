@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:color="@color/my_orange_1" android:state_selected="true" />
+        android:color="@color/theme_primary" android:state_selected="true" />
 
     <item android:color="@color/my_grey" android:state_selected="false" />
 

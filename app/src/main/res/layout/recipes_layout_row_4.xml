@@ -2,15 +2,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_recipe"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="12dp"
     android:layout_marginEnd="12dp"
-    android:layout_marginTop="8dp"
+    android:layout_marginTop="2dp"
     android:layout_marginBottom="8dp"
     android:padding="5dp"
     app:cardElevation="8dp"
-    app:cardBackgroundColor="@color/white"
+    app:cardBackgroundColor="?attr/cardview_background"
     app:cardCornerRadius="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -57,7 +58,7 @@
             android:ellipsize="end"
             android:maxLines="5"
             android:padding="5dp"
-            android:textColor="@color/black"
+            android:textColor="?attr/text_color_black"
             android:textSize="20sp"
             android:textStyle="bold"
             app:fontFamily="@font/concert_one"
@@ -76,7 +77,7 @@
             android:layout_marginBottom="4dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="8dp"
-            android:backgroundTint="@color/my_orange_1"
+            android:backgroundTint="@color/theme_primary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cv_img_food">
 

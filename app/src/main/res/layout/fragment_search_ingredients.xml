@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/background_color"
     tools:context=".ui.fragments.SearchIngredientsFragment">
 
-    <com.facebook.shimmer.ShimmerFrameLayout
+    <!--<com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmer_ingredients_search_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,12 +23,27 @@
 
         <include layout="@layout/shimmer_recyclerview_grid" />
 
-    </com.facebook.shimmer.ShimmerFrameLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lt_lottie_ingredients"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ingredients_question" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cv_searchview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?attr/editTextBackground"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
@@ -51,7 +67,10 @@
                 android:layout_gravity="start|center"
                 android:layout_margin="12dp"
                 android:background="@drawable/ic_back_arrow"
-                android:backgroundTint="@color/my_blue" />
+                android:backgroundTint="@color/my_blue"
+                android:minWidth="30dp"
+                android:minHeight="30dp"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <EditText
                 android:id="@+id/et_search"
@@ -59,14 +78,14 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="end|center"
                 android:layout_margin="12dp"
-                android:fontFamily="@font/concert_one"
                 android:background="@null"
-                android:hint="Search an ingredient"
+                android:fontFamily="@font/concert_one"
+                android:hint="@string/search_an_ingredient"
                 android:inputType="text"
                 android:maxLines="1"
-                android:textSize="25sp"
-                android:textColor="@color/my_orange_1"
-                android:textColorHint="@color/my_grey" />
+                android:textColor="?attr/text_color_orange"
+                android:textColorHint="?attr/sub_sub_text_color"
+                android:textSize="25sp" />
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
@@ -84,40 +103,49 @@
         app:layout_constraintVertical_bias="0.498"
         tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         tools:listitem="@layout/searched_ingredients_row"
-        tools:spanCount="2" />
+        tools:spanCount="2"
+        tools:visibility="gone" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_no_result"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp"
+        tools:visibility="gone">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/shapeableImageView3"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/no_search_result"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lt_lottie"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.35000002" />
+            app:layout_constraintVertical_bias="0.5"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/no_search_results" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0.5"
+            android:fontFamily="@font/concert_one"
             android:text="No results found"
-            android:textColor="@color/my_orange_1"
-            android:textSize="25sp"
+            android:textColor="?attr/text_color_orange"
+            android:textSize="35sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/shapeableImageView3"
-            app:layout_constraintStart_toStartOf="@+id/shapeableImageView3"
-            app:layout_constraintTop_toBottomOf="@+id/shapeableImageView3"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintEnd_toEndOf="@+id/lt_lottie"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/lt_lottie"
+            app:layout_constraintTop_toBottomOf="@+id/lt_lottie" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

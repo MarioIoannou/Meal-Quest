@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.snackbar.Snackbar
-import com.marioioannou.mealquest.adapters.SearchIngredientsAdapter
+import com.marioioannou.mealquest.adapters.recyclerview_adapters.SearchIngredientsAdapter
 import com.marioioannou.mealquest.databinding.FragmentSearchIngredientsBinding
 import com.marioioannou.mealquest.ui.fragments.recipes_fragment.RecipesViewModel
 import com.marioioannou.mealquest.utils.ScreenState
@@ -43,6 +43,7 @@ class SearchIngredientsFragment : Fragment(), SearchView.OnQueryTextListener {
         binding = FragmentSearchIngredientsBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(requireActivity())[MainViewModel::class.java]
         recipesViewModel = ViewModelProvider(requireActivity())[RecipesViewModel::class.java]
+        binding.ltLottie.pauseAnimation()
         return binding.root
     }
 
@@ -103,14 +104,15 @@ class SearchIngredientsFragment : Fragment(), SearchView.OnQueryTextListener {
                     Handler(Looper.getMainLooper()).postDelayed({
                         hideShimmerEffect()
                     },100L)
-                    hideKeyboard()
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        hideKeyboard()
+                    },1000L)
                     recipeResponse.data?.let { recipes ->
                         searchIngredientsAdapter.differ.submitList(recipes.results)
                     }
                 }
                 is ScreenState.Error -> {
                     searchError()
-
                     //Log.e(TAG, "   requestApiData() Response Error")
                 }
             }
@@ -129,20 +131,26 @@ class SearchIngredientsFragment : Fragment(), SearchView.OnQueryTextListener {
     }
 
     private fun showShimmerEffect() {
-        binding.shimmerIngredientsSearchRv.startShimmer()
-        binding.shimmerIngredientsSearchRv.visibility = View.VISIBLE
+        binding.ltLottieIngredients.playAnimation()
+        binding.ltLottieIngredients.visibility = View.VISIBLE
+        //binding.shimmerIngredientsSearchRv.startShimmer()
+        //binding.shimmerIngredientsSearchRv.visibility = View.VISIBLE
         binding.rvSearchIngredient.visibility = View.GONE
     }
 
     private fun hideShimmerEffect() {
-        binding.shimmerIngredientsSearchRv.stopShimmer()
-        binding.shimmerIngredientsSearchRv.visibility = View.GONE
+        //binding.shimmerIngredientsSearchRv.stopShimmer()
+        //binding.shimmerIngredientsSearchRv.visibility = View.GONE
+        binding.ltLottieIngredients.visibility = View.GONE
         binding.rvSearchIngredient.visibility = View.VISIBLE
+        binding.ltLottieIngredients.pauseAnimation()
     }
 
     private fun searchError() {
-        binding.shimmerIngredientsSearchRv.stopShimmer()
-        binding.shimmerIngredientsSearchRv.visibility = View.GONE
+        binding.ltLottie.playAnimation()
+        //binding.shimmerIngredientsSearchRv.stopShimmer()
+        //binding.shimmerIngredientsSearchRv.visibility = View.GONE
+        binding.ltLottieIngredients.visibility = View.GONE
         binding.rvSearchIngredient.visibility = View.GONE
         binding.layoutNoResult.visibility = View.VISIBLE
     }

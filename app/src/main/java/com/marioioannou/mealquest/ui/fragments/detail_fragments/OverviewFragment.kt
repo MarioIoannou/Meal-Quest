@@ -1,5 +1,7 @@
 package com.marioioannou.mealquest.ui.fragments.detail_fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -46,6 +48,13 @@ class OverviewFragment : Fragment() {
             showCorrect(myBundle.glutenFree,binding.imgCorrectGlutenFree)
             showCorrect(myBundle.veryHealthy,binding.imgCorrectHealthy)
             showCorrect(myBundle.cheap,binding.imgCorrectCheap)
+            tvSource.text = myBundle.sourceName
+            tvAuthor.text = myBundle.creditsText
+            cvSource.setOnClickListener {
+                val url: Uri = Uri.parse(myBundle.sourceUrl)
+                val intent = Intent(Intent.ACTION_VIEW, url)
+                startActivity(intent)
+            }
 //            if (myBundle.vegan == true){
 //                imgCorrectVegan.visibility = View.VISIBLE
 //            }

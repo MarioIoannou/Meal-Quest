@@ -14,7 +14,7 @@
         android:layout_gravity="center_horizontal"
         android:padding="8dp"
         app:cardElevation="3dp"
-        app:cardBackgroundColor="@color/white"
+        app:cardBackgroundColor="?attr/cardview_background"
         app:cardCornerRadius="18dp">
 
         <RelativeLayout
@@ -48,7 +48,8 @@
                 android:maxLines="2"
                 android:padding="5dp"
                 android:textAlignment="center"
-                android:textColor="@color/my_black"
+                android:fontFamily="@font/concert_one"
+                android:textColor="?attr/text_color_black"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 tools:text="Banana leaves" />

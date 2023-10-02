@@ -5,7 +5,6 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.dataStore
 import androidx.datastore.preferences.core.*
 import androidx.datastore.preferences.preferencesDataStore
-import androidx.datastore.preferences.preferencesDataStoreFile
 import com.marioioannou.mealquest.utils.Constants
 import com.marioioannou.mealquest.utils.Constants.DEFAULT_CUISINE_TYPE
 import com.marioioannou.mealquest.utils.Constants.DEFAULT_DIET_TYPE
@@ -27,6 +26,10 @@ import kotlinx.coroutines.flow.map
 import okio.IOException
 import javax.inject.Inject
 
+private val Context.dataStore by preferencesDataStore(
+    name = Constants.PREFERENCES_NAME
+)
+
 @ViewModelScoped
 class DataStoreRepository @Inject constructor(
     @ApplicationContext private val context: Context,
@@ -45,13 +48,9 @@ class DataStoreRepository @Inject constructor(
         val backOnline = booleanPreferencesKey(PREFERENCES_BACK_ONLINE)
     }
 
-    private val Context.dataStore by preferencesDataStore(
-        name = Constants.PREFERENCES_NAME
-    )
-
     private val dataStore: DataStore<Preferences> = context.dataStore
 
-    suspend fun saveMealAndDietType(
+    suspend fun saveMealDietAndCuisineType(
         mealType: String,
         mealTypeId: Int,
         dietType: String,

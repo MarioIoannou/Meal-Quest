@@ -10,6 +10,8 @@ import kotlinx.parcelize.RawValue
 data class Result(
     @SerializedName("aggregateLikes")
     val aggregateLikes: Int?,
+    @SerializedName("analyzedInstructions")
+    val analyzedInstructions: @RawValue List<AnalyzedInstruction>?,
     @SerializedName("cheap")
     val cheap: Boolean?,
     @SerializedName("cookingMinutes")
@@ -20,12 +22,16 @@ data class Result(
     val cuisines: List<String>?,
     @SerializedName("dairyFree")
     val dairyFree: Boolean?,
+    @SerializedName("diets")
+    val diets: List<String>?,
+    @SerializedName("dishTypes")
+    val dishTypes: List<String>?,
     @SerializedName("extendedIngredients")
     val extendedIngredients: @RawValue List<ExtendedIngredient>?,
-    @SerializedName("gaps")
-    val gaps: String?,
     @SerializedName("glutenFree")
     val glutenFree: Boolean?,
+    @SerializedName("healthScore")
+    val healthScore: Int?,
     @SerializedName("id")
     val id: Int?,
     @SerializedName("image")
@@ -36,10 +42,6 @@ data class Result(
     val license: String?,
     @SerializedName("likes")
     val likes: Int?,
-    @SerializedName("lowFodmap")
-    val lowFodmap: Boolean?,
-    @SerializedName("missedIngredientCount")
-    val missedIngredientCount: Int?,
     @SerializedName("preparationMinutes")
     val preparationMinutes: Int?,
     @SerializedName("pricePerServing")

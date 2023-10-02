@@ -1,419 +1,532 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF3E8"
     tools:context=".ui.fragments.detail_fragments.OverviewFragment">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/img_overview"
-        android:layout_width="match_parent"
-        android:layout_height="320dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:background="@drawable/test_image" />
-
-    <View
-        android:id="@+id/view_gradient"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@drawable/gradient"
-        app:layout_constraintBottom_toBottomOf="@+id/img_overview"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <View
-        android:id="@+id/view_shape"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/img_view_shape"
-        app:layout_constraintBottom_toBottomOf="@+id/img_overview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView3"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:backgroundTint="@color/my_orange_1"
-        app:cardCornerRadius="35dp"
-        app:cardElevation="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_overview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view_gradient">
+        android:background="?attr/overview_background">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_overview_name"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_overview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="3"
-            android:padding="5dp"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:fontFamily="@font/concert_one"
-            app:layout_constraintBottom_toTopOf="@+id/view_shape"
+            android:layout_height="330dp"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="Red Kidney Bean Jambalaya " />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/test_image" />
 
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/my_blue"
-        app:cardCornerRadius="35dp"
-        app:cardElevation="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_overview">
-
-        <LinearLayout
+        <View
+            android:id="@+id/view_gradient"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="4dp"
-            android:weightSum="3">
+            android:layout_height="100dp"
+            android:background="@drawable/gradient"
+            app:layout_constraintBottom_toBottomOf="@+id/img_overview"
+            tools:layout_editor_absoluteX="16dp" />
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/serving"
-                    android:backgroundTint="@color/my_light_orange" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tv_serving_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:ellipsize="end"
-                    android:gravity="center"
-                    android:maxLines="5"
-                    android:padding="5dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/concert_one"
-                    tools:text="20" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/time_svgrepo_com"
-                    android:backgroundTint="@color/my_light_orange" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tv_minutes_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:ellipsize="end"
-                    android:gravity="center"
-                    android:maxLines="5"
-                    android:padding="5dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/concert_one"
-                    tools:text="200" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/love_svgrepo_com"
-                    android:backgroundTint="@color/my_light_orange" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tv_likes_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:ellipsize="end"
-                    android:gravity="center"
-                    android:maxLines="5"
-                    android:padding="5dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/concert_one"
-                    tools:text="2000" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cv_info"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <View
+            android:id="@+id/view_shape"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="50dp"
+            android:background="@drawable/img_view_shape"
+            app:layout_constraintBottom_toBottomOf="@+id/img_overview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/img_correct_vegan"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/correct"
-                android:visibility="invisible"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/theme_primary"
+            app:cardCornerRadius="35dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_overview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view_gradient">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_overview_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="3"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/concert_one"
+                app:layout_constraintBottom_toTopOf="@+id/view_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                tools:text="Red Kidney Bean Jambalaya " />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/materialTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:text="Vegan"
-                android:textAlignment="center"
-                android:textColor="@color/my_black"
-                android:textSize="15sp"
-                app:fontFamily="@font/concert_one"
-                app:layout_constraintBottom_toBottomOf="@+id/img_correct_vegan"
-                app:layout_constraintStart_toEndOf="@+id/img_correct_vegan"
-                app:layout_constraintTop_toTopOf="@+id/img_correct_vegan"
-                app:layout_constraintVertical_bias="0.50" />
+        </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/img_correct_vegeterian"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/correct"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/img_correct_vegan"
-                app:layout_constraintTop_toBottomOf="@+id/img_correct_vegan" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/materialTextView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:text="Vegeterian"
-                android:textAlignment="center"
-                android:textColor="@color/my_black"
-                android:textSize="15sp"
-                app:fontFamily="@font/concert_one"
-                app:layout_constraintBottom_toBottomOf="@+id/img_correct_vegeterian"
-                app:layout_constraintStart_toEndOf="@+id/img_correct_vegeterian"
-                app:layout_constraintTop_toTopOf="@+id/img_correct_vegeterian" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/img_correct_dairy_free"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/correct"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/materialTextView"
-                app:layout_constraintStart_toStartOf="@+id/img_correct_gluten_free"
-                app:layout_constraintTop_toTopOf="@+id/materialTextView" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/materialTextView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:text="Dairy Free"
-                android:textAlignment="center"
-                android:textColor="@color/my_black"
-                android:textSize="15sp"
-                app:fontFamily="@font/concert_one"
-                app:layout_constraintBottom_toBottomOf="@+id/img_correct_dairy_free"
-                app:layout_constraintStart_toEndOf="@+id/img_correct_dairy_free"
-                app:layout_constraintTop_toTopOf="@+id/img_correct_dairy_free" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/img_correct_gluten_free"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="24dp"
-                android:background="@drawable/correct"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/materialTextView2"
-                app:layout_constraintStart_toEndOf="@+id/materialTextView2"
-                app:layout_constraintTop_toTopOf="@+id/materialTextView2" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/materialTextView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:text="Gluten Free"
-                android:textAlignment="center"
-                android:textColor="@color/my_black"
-                android:textSize="15sp"
-                app:fontFamily="@font/concert_one"
-                app:layout_constraintBottom_toBottomOf="@+id/img_correct_gluten_free"
-                app:layout_constraintStart_toEndOf="@+id/img_correct_gluten_free"
-                app:layout_constraintTop_toTopOf="@+id/img_correct_gluten_free" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/img_correct_healthy"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/correct"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/materialTextView3"
-                app:layout_constraintStart_toStartOf="@+id/img_correct_cheap"
-                app:layout_constraintTop_toTopOf="@+id/materialTextView3" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:text="Healthy"
-                android:textAlignment="center"
-                android:textColor="@color/my_black"
-                android:textSize="15sp"
-                app:fontFamily="@font/concert_one"
-                app:layout_constraintBottom_toBottomOf="@+id/img_correct_healthy"
-                app:layout_constraintStart_toEndOf="@+id/img_correct_healthy"
-                app:layout_constraintTop_toTopOf="@+id/img_correct_healthy" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/img_correct_cheap"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="24dp"
-                android:background="@drawable/correct"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/materialTextView4"
-                app:layout_constraintStart_toEndOf="@+id/materialTextView4"
-                app:layout_constraintTop_toTopOf="@+id/materialTextView4" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:text="Cheap"
-                android:textAlignment="center"
-                android:textColor="@color/my_black"
-                android:textSize="15sp"
-                app:fontFamily="@font/concert_one"
-                app:layout_constraintBottom_toBottomOf="@+id/img_correct_cheap"
-                app:layout_constraintStart_toEndOf="@+id/img_correct_cheap"
-                app:layout_constraintTop_toTopOf="@+id/img_correct_cheap" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv_info"
-        app:layout_constraintVertical_bias="0.0">
-        
-        <ScrollView
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="12dp">
-            
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/my_blue"
+            app:cardCornerRadius="35dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_overview">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/serving"
+                        android:backgroundTint="@color/my_light_orange" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_serving_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="5"
+                        android:padding="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/concert_one"
+                        tools:text="20" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/time_svgrepo_com"
+                        android:backgroundTint="@color/my_light_orange" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_minutes_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="5"
+                        android:padding="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/concert_one"
+                        tools:text="200" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/love_svgrepo_com"
+                        android:backgroundTint="@color/my_light_orange" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_likes_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="5"
+                        android:padding="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/concert_one"
+                        tools:text="2000" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/cardview_background"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_correct_vegan"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/correct"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/tv_summary"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/open_sans"
+                    android:id="@+id/materialTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:text="@string/vegan_details"
+                    android:textAlignment="center"
+                    android:textColor="?attr/text_color_black"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/concert_one"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_correct_vegan"
+                    app:layout_constraintStart_toEndOf="@+id/img_correct_vegan"
+                    app:layout_constraintTop_toTopOf="@+id/img_correct_vegan"
+                    app:layout_constraintVertical_bias="0.50" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_correct_vegeterian"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/correct"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/img_correct_vegan"
+                    app:layout_constraintTop_toBottomOf="@+id/img_correct_vegan" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:text="@string/vegeterian"
+                    android:textAlignment="center"
+                    android:textColor="?attr/text_color_black"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/concert_one"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_correct_vegeterian"
+                    app:layout_constraintStart_toEndOf="@+id/img_correct_vegeterian"
+                    app:layout_constraintTop_toTopOf="@+id/img_correct_vegeterian"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_correct_dairy_free"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/correct"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/materialTextView"
+                    app:layout_constraintStart_toStartOf="@+id/img_correct_gluten_free"
+                    app:layout_constraintTop_toTopOf="@+id/materialTextView" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:text="@string/dairy_free"
+                    android:textAlignment="center"
+                    android:textColor="?attr/text_color_black"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/concert_one"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_correct_dairy_free"
+                    app:layout_constraintStart_toEndOf="@+id/img_correct_dairy_free"
+                    app:layout_constraintTop_toTopOf="@+id/img_correct_dairy_free" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_correct_gluten_free"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/correct"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/materialTextView2"
+                    app:layout_constraintStart_toEndOf="@+id/materialTextView2"
+                    app:layout_constraintTop_toTopOf="@+id/materialTextView2" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:text="@string/gluten_free_details"
+                    android:textAlignment="center"
+                    android:textColor="?attr/text_color_black"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/concert_one"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_correct_gluten_free"
+                    app:layout_constraintStart_toEndOf="@+id/img_correct_gluten_free"
+                    app:layout_constraintTop_toTopOf="@+id/img_correct_gluten_free" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_correct_healthy"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/correct"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/materialTextView3"
+                    app:layout_constraintStart_toStartOf="@+id/img_correct_cheap"
+                    app:layout_constraintTop_toTopOf="@+id/materialTextView3" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:text="@string/healthy"
+                    android:textAlignment="center"
+                    android:textColor="?attr/text_color_black"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/concert_one"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_correct_healthy"
+                    app:layout_constraintStart_toEndOf="@+id/img_correct_healthy"
+                    app:layout_constraintTop_toTopOf="@+id/img_correct_healthy" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_correct_cheap"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/correct"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/materialTextView4"
+                    app:layout_constraintStart_toEndOf="@+id/materialTextView4"
+                    app:layout_constraintTop_toTopOf="@+id/materialTextView4" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:text="@string/cheap"
+                    android:textAlignment="center"
+                    android:textColor="?attr/text_color_black"
+                    app:fontFamily="@font/concert_one"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_correct_cheap"
+                    app:layout_constraintStart_toEndOf="@+id/img_correct_cheap"
+                    app:layout_constraintTop_toTopOf="@+id/img_correct_cheap" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/materialCardView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_info">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_summary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/concert_one"
+                android:lineSpacingExtra="2dp"
+                android:textColor="?attr/text_color_black"
+                android:textSize="16sp"
+                tools:text="Red Kidney Bean Jambalaya Red Kidney Bean Jambalaya" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/concert_one"
+                    android:text="@string/website"
+                    android:textColor="@color/my_blue"
                     android:textSize="16sp"
-                    android:textColor="@color/my_black"/>
-            </LinearLayout>
-            
-        </ScrollView>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_source"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/concert_one"
+                    android:text=""
+                    android:textColor="?attr/text_color_black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/materialTextView5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/materialTextView5"
+                    app:layout_constraintTop_toTopOf="@+id/materialTextView5" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/concert_one"
+                    android:text="@string/author"
+                    android:textColor="@color/my_blue"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/cv_source"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView5"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_author"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/concert_one"
+                    android:text=""
+                    android:textColor="?attr/text_color_black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/materialTextView6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/materialTextView6"
+                    app:layout_constraintTop_toTopOf="@+id/materialTextView6" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_source"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    app:cardBackgroundColor="@color/my_light_orange"
+                    app:cardCornerRadius="35dp"
+                    app:cardElevation="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="3"
+                        android:padding="5dp"
+                        android:text="@string/source"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="21sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/concert_one" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
 
     <!--
     <View

@@ -8,20 +8,24 @@
     <fragment
         android:id="@+id/favouriteFragment"
         android:name="com.marioioannou.mealquest.ui.fragments.FavouriteFragment"
-        android:label="Saved Recipes"
-        tools:layout="@layout/fragment_favourite" />
+        android:label="Favorite Recipes"
+        tools:layout="@layout/fragment_favourite" >
+        <action
+            android:id="@+id/action_favouriteFragment_to_detailsActivity"
+            app:destination="@id/detailsActivity" />
+    </fragment>
     <fragment
         android:id="@+id/recipesFragment"
         android:name="com.marioioannou.mealquest.ui.fragments.recipes_fragment.RecipesFragment"
-        android:label="Recipes"
+        android:label="Meal Finder"
         tools:layout="@layout/fragment_recipes" >
-        <action
-            android:id="@+id/action_recipesFragment_to_recipesBottomSheet"
-            app:destination="@id/recipesBottomSheet" />
         <argument
             android:name="backFromBottomSheet"
             app:argType="boolean"
             android:defaultValue="false" />
+        <action
+            android:id="@+id/action_recipesFragment_to_recipesBottomSheet"
+            app:destination="@id/recipesBottomSheet" />
         <action
             android:id="@+id/action_recipesFragment_to_detailsActivity"
             app:destination="@id/detailsActivity" />
@@ -63,10 +67,9 @@
         tools:layout="@layout/recipes_bottom_sheet" >
         <action
             android:id="@+id/action_recipesBottomSheet_to_recipesFragment"
-            app:destination="@id/recipesFragment" >
-            <argument
-                android:name="backFromBottomSheet"
-                android:defaultValue="false" />
+            app:destination="@id/recipesFragment"
+            app:popUpTo="@id/recipesFragment"
+            app:popUpToInclusive="true" >
         </action>
         <action
             android:id="@+id/action_recipesBottomSheet_to_dietInfoFragment"
@@ -83,9 +86,13 @@
         tools:layout="@layout/fragment_search_ingredients" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.marioioannou.mealquest.ui.fragments.SettingsFragment"
+        android:name="com.marioioannou.mealquest.ui.fragments.setting_fragments.SettingsFragment"
         android:label="Settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_aboutBottomSheet"
+            app:destination="@id/aboutBottomSheet"/>
+    </fragment>
     <fragment
         android:id="@+id/recipesByIngredientsFragment"
         android:name="com.marioioannou.mealquest.ui.fragments.RecipesByIngredientsFragment"
@@ -93,7 +100,14 @@
         tools:layout="@layout/fragment_recipes_by_ingredients" >
         <argument
             android:name="ingredients"
-            app:argType="string" />
+            app:argType="string"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_recipesByIngredientsFragment_to_recipesByIngredientsDetailsFragment"
+            app:destination="@id/recipesByIngredientsDetailsFragment" />
     </fragment>
     <activity
         android:id="@+id/detailsActivity"
@@ -104,4 +118,25 @@
             android:name="result"
             app:argType="com.marioioannou.mealquest.domain.model.recipes.Result" />
     </activity>
+    <fragment
+        android:id="@+id/recipesByIngredientsDetailsFragment"
+        android:name="com.marioioannou.mealquest.ui.fragments.RecipesByIngredientsDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_recipes_by_ingredients_details" >
+        <argument
+            android:name="recipeId"
+            app:argType="com.marioioannou.mealquest.domain.model.recipes_by_ingredients.RecipesByIngredientsItem" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_settingsFragment"
+        app:destination="@id/settingsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+    <dialog
+        android:id="@+id/aboutBottomSheet"
+        android:name="com.marioioannou.mealquest.ui.fragments.setting_fragments.AboutBottomSheet"
+        android:label="fragment_about_bottom_sheet"
+        tools:layout="@layout/fragment_about_bottom_sheet" />
 </navigation>

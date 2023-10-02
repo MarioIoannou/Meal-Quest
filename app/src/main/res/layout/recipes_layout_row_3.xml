@@ -74,7 +74,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/img_food"
             app:layout_constraintTop_toTopOf="@+id/tv_clock_number"
-            app:tint="@color/my_orange_1" />
+            app:tint="@color/theme_primary" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_clock_number"
@@ -83,7 +83,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginBottom="8dp"
             android:layout_toEndOf="@id/shapeableImageView2"
-            android:textColor="@color/my_orange_1"
+            android:textColor="@color/theme_primary"
             android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"

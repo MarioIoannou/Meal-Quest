@@ -10,7 +10,7 @@
     android:layout_marginBottom="8dp"
     android:padding="5dp"
     app:cardElevation="8dp"
-    app:cardBackgroundColor="@color/white"
+    app:cardBackgroundColor="?attr/cardview_background"
     app:cardCornerRadius="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,110 +35,80 @@
                 android:id="@+id/img_food"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
+                android:scaleType="fitCenter"
                 tools:src="@drawable/test_image" />
 
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_recipe_title"
+            android:id="@+id/tv_ingredient_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="32dp"
             android:ellipsize="end"
             android:maxLines="3"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textColor="?attr/text_color_black"
+            android:textSize="23sp"
             android:textStyle="bold"
             app:fontFamily="@font/concert_one"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/cv_img_food"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             tools:text="YumYum YumYum YumYum YumYum" />
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/img_item_2"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/correct"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_item_2"
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/concert_one"
+            android:textColor="?attr/text_color_orange"
+            tools:text="100"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_unit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/cv_img_food"
-            app:layout_constraintTop_toTopOf="@+id/tv_item_2" />
+            app:layout_constraintTop_toTopOf="@+id/tv_unit" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_item_2"
+            android:id="@+id/tv_unit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginBottom="52dp"
-            android:layout_toEndOf="@id/img_item_2"
-            android:visibility="invisible"
-            android:textColor="@color/my_black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/tv_amount"
+            android:fontFamily="@font/concert_one"
+            android:textColor="?attr/text_color_orange"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/img_item_2"
-            tools:text="Banana" />
+            app:layout_constraintStart_toEndOf="@+id/tv_amount"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ingredient_title"
+            tools:text="tbsp" />
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/img_item_3"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:layout_marginStart="8dp"
-            android:src="@drawable/correct"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_item_3"
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_original"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/concert_one"
+            android:textSize="15sp"
+            android:textColor="?attr/sub_text_color"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/cv_img_food"
-            app:layout_constraintTop_toTopOf="@+id/tv_item_3" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_item_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginBottom="28dp"
-            android:layout_toEndOf="@id/img_item_3"
-            android:visibility="invisible"
-            android:textColor="@color/my_black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/img_item_3"
-            tools:text="Banana" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_and_more"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/img_item_3"
-            android:visibility="invisible"
-            android:text="And more ..."
-            android:textColor="@color/my_black"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
-            app:layout_constraintStart_toEndOf="@+id/cv_img_food"
-            app:layout_constraintTop_toBottomOf="@+id/img_item_3"
-            app:layout_constraintVertical_bias="0.14999998" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_unit"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="2 medium carrots, sliced" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

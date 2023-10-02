@@ -11,7 +11,7 @@
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="?attr/background_color"
         android:fitsSystemWindows="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +21,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="?attr/background_color"
             android:theme="@style/MyThemeOverlay_Toolbar"
             app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment"
             app:layout_constraintEnd_toEndOf="parent"
@@ -37,15 +37,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:tabBackground="@color/white"
+            app:tabBackground="?attr/background_color"
+            app:tabGravity="center"
             app:tabIndicator="@drawable/custom_indicator"
             app:tabIndicatorAnimationMode="elastic"
             app:tabIndicatorGravity="stretch"
             app:tabMode="fixed"
-            app:tabGravity="center"
             app:tabRippleColor="@null"
             app:tabTextAppearance="@style/CustomTabTextStyle"
-            app:tabTextColor="@color/my_light_orange" />
+            app:tabTextColor="@color/my_light_orange"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -53,10 +54,24 @@
         android:id="@+id/viewPager2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/adViewDetails"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBar" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

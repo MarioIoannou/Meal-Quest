@@ -5,8 +5,13 @@ import com.marioioannou.mealquest.BuildConfig
 
 object Constants {
 
+    var firstTime = true
+
     const val BASE_URL = "https://api.spoonacular.com/"
     const val API_KEY = BuildConfig.API_KEY
+
+    //API_KEY_MAIN = "b3e9511b4614495cb77f2a5f1c2c4c86"
+    //API_KEY_2 = "5b72ae8c78504aa3ab2619298ff2363d"
 
     const val PREFERENCES_BACK_ONLINE = "backOnline"
 
@@ -47,10 +52,13 @@ object Constants {
     //Room
     const val DATABASE_NAME = "recipes_database"
     const val RECIPES_TABLE = "recipes_table"
+    const val RANDOM_RECIPES_TABLE = "random_recipes_table"
     const val INGREDIENTS_TABLE = "ingredients_table"
+    const val FAVORITE_RECIPES_TABLE = "favorite_recipes_table"
 
     //Bottom Sheet and Preferences
-    const val DEFAULT_RECIPES_NUMBER = "10"
+    const val DEFAULT_RECIPES_NUMBER = "50"
+    const val DEFAULT_RANDOM_RECIPES_NUMBER = "10"
     const val DEFAULT_MEAL_TYPE = "main course"
     const val DEFAULT_CUISINE_TYPE = "all"
     const val DEFAULT_DIET_TYPE = "all"
@@ -62,6 +70,8 @@ object Constants {
     const val PREFERENCES_DIET_TYPE_ID= "dietTypeId"
     const val PREFERENCES_CUISINE_TYPE = "cuisineType"
     const val PREFERENCES_CUISINE_TYPE_ID= "cuisineIdType"
+    const val PREFERENCES_THEME= "system default"
+
     //const val DEFAULT_ = ""
     //const val DEFAULT_ = ""
 }

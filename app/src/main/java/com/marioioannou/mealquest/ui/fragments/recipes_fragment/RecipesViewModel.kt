@@ -1,16 +1,24 @@
 package com.marioioannou.mealquest.ui.fragments.recipes_fragment
 
 import android.app.Application
+import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.util.Log
+import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
+import com.marioioannou.mealquest.R
 import com.marioioannou.mealquest.domain.datastore.DataStoreRepository
 import com.marioioannou.mealquest.domain.datastore.MealDietAndCuisine
+import com.marioioannou.mealquest.utils.Constants
 import com.marioioannou.mealquest.utils.Constants.API_KEY
 import com.marioioannou.mealquest.utils.Constants.DEFAULT_CUISINE_TYPE
 import com.marioioannou.mealquest.utils.Constants.DEFAULT_DIET_TYPE
 import com.marioioannou.mealquest.utils.Constants.DEFAULT_MEAL_TYPE
+import com.marioioannou.mealquest.utils.Constants.DEFAULT_RANDOM_RECIPES_NUMBER
 import com.marioioannou.mealquest.utils.Constants.DEFAULT_RECIPES_NUMBER
 import com.marioioannou.mealquest.utils.Constants.QUERY_ADD_RECIPE_INFO
 import com.marioioannou.mealquest.utils.Constants.QUERY_API_KEY
@@ -35,14 +43,15 @@ class RecipesViewModel @Inject constructor(
 
     var networkStatus = false
     var backOnline = false
+    var backFromBottomSheet = false
 
     val readMealAndDietType = dataStoreRepository.readMealAndDietType
     val readBackOnline = dataStoreRepository.readBackOnline.asLiveData()
 
-    fun saveMealAndDietType() =
+    fun saveMealDietAndCuisineType() =
         viewModelScope.launch(Dispatchers.IO) {
             if (this@RecipesViewModel::mealDietAndCuisine.isInitialized) {
-                dataStoreRepository.saveMealAndDietType(
+                dataStoreRepository.saveMealDietAndCuisineType(
                     mealDietAndCuisine.selectedMealType,
                     mealDietAndCuisine.selectedMealTypeId,
                     mealDietAndCuisine.selectedDietType,
@@ -71,6 +80,13 @@ class RecipesViewModel @Inject constructor(
         )
     }
 
+    fun applyRandomRecipesQueries(): HashMap<String, String> {
+        val queries: HashMap<String, String> = HashMap()
+        queries[QUERY_NUMBER] = DEFAULT_RANDOM_RECIPES_NUMBER
+        queries[QUERY_API_KEY] = API_KEY
+        return queries
+    }
+
     fun applyQueries(): HashMap<String, String> {
         val queries: HashMap<String, String> = HashMap()
 
@@ -80,13 +96,20 @@ class RecipesViewModel @Inject constructor(
         queries[QUERY_FILL_INGREDIENTS] = "true"
 
         if (this@RecipesViewModel::mealDietAndCuisine.isInitialized) {
+            Log.d("RECIPES VIEWMODEL",
+                "selectedCuisine: ${mealDietAndCuisine.selectedCuisineType} " +
+                    " selectedDiet: ${mealDietAndCuisine.selectedDietType}" +
+                        " selectedMeal: ${mealDietAndCuisine.selectedMealType}")
             if (mealDietAndCuisine.selectedCuisineType.lowercase() == "all" && mealDietAndCuisine.selectedDietType.lowercase() != "all"){
+                Log.d("RECIPES_VM_1","Cuisine all")
                 queries[QUERY_MEAL_TYPE] = mealDietAndCuisine.selectedMealType
                 queries[QUERY_DIET] = mealDietAndCuisine.selectedDietType
             }else if (mealDietAndCuisine.selectedCuisineType.lowercase() != "all" && mealDietAndCuisine.selectedDietType.lowercase() == "all"){
+                Log.d("RECIPES_VM_1","Diet all")
                 queries[QUERY_MEAL_TYPE] = mealDietAndCuisine.selectedMealType
                 queries[QUERY_CUISINE] = mealDietAndCuisine.selectedCuisineType
             }else if (mealDietAndCuisine.selectedCuisineType.lowercase() == "all" && mealDietAndCuisine.selectedDietType.lowercase() == "all"){
+                Log.d("RECIPES_VM_1","Diet & Cuisine all")
                 queries[QUERY_MEAL_TYPE] = mealDietAndCuisine.selectedMealType
             }else{
                 queries[QUERY_MEAL_TYPE] = mealDietAndCuisine.selectedMealType
@@ -109,7 +132,6 @@ class RecipesViewModel @Inject constructor(
         return queries
     }
 
-
 //    fun applySearchQuery(searchQuery: String): HashMap<String, String> {
 //        val queries: HashMap<String, String> = HashMap()
 //        queries[QUERY_SEARCH] = searchQuery
@@ -127,11 +149,11 @@ class RecipesViewModel @Inject constructor(
 
     fun showNetworkStatus() {
         if (!networkStatus) {
-            Toast.makeText(getApplication(), "No Internet Connection.", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(getApplication(), "No Internet Connection.", Toast.LENGTH_SHORT).show()
             saveBackOnline(true)
         } else if (networkStatus) {
             if (backOnline) {
-                Toast.makeText(getApplication(), "We're back online.", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(getApplication(), "We're back online.", Toast.LENGTH_SHORT).show()
                 saveBackOnline(false)
             }
         }

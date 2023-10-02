@@ -9,10 +9,14 @@
     <string name="food_facts">Τροφικά Γεγονότα</string>
     <string name="info_about_diets"><u>Πάτησε <font color="#E44745">εδώ</font> για περισσότερες πληροφορίες σχετικά με τις δίαιτες.</u></string>
 
+    <string name="overview">Επισκόπηση</string>
+    <string name="ingredients">Συστατικά</string>
+    <string name="instruction">Οδηγίες</string>
+
     <string name="gluten_free">Η εξάλειψη της γλουτένης σημαίνει αποφυγή του σίτου, του κριθαριού, της σίκαλης και άλλων δημητριακών που περιέχουν γλουτένη και τροφών που παρασκευάζονται από αυτά (ή που μπορεί να έχουν διασταυρωθεί).</string>
     <string name="ketogenic">Η κετογονική δίαιτα βασίζεται περισσότερο στην αναλογία λίπους, πρωτεΐνης και υδατανθράκων στη διατροφή παρά σε συγκεκριμένα συστατικά. Σε γενικές γραμμές, τα τρόφιμα με υψηλή περιεκτικότητα σε λιπαρά, πλούσια σε πρωτεΐνες είναι αποδεκτά και τα τρόφιμα με υψηλή περιεκτικότητα σε υδατάνθρακες όχι. Η φόρμουλα που χρησιμοποιούμε είναι 55–80% περιεκτικότητα σε λιπαρά, 15–35% περιεκτικότητα σε πρωτεΐνες και κάτω από 10% σε υδατάνθρακες.</string>
     <string name="vegetarian">Κανένα συστατικό δεν επιτρέπεται να περιέχει κρέας ή υποπροϊόντα κρέατος, όπως κόκκαλα ή ζελατίνη.</string>
-    <string name="vegan">No ingredients may contain meat or meat by-products, such as bones or gelatin, nor may they contain eggs, dairy, or honey.</string>
+    <string name="vegan">Κανένα συστατικό δεν μπορεί να περιέχει κρέας ή υποπροϊόντα κρέατος, όπως οστά ή ζελατίνη, ούτε αυγά, γαλακτοκομικά ή μέλι.</string>
     <string name="pescetarian">Κανένα συστατικό δεν επιτρέπεται να περιέχει κρέας ή υποπροϊόντα κρέατος, όπως κόκκαλα ή ζελατίνη, ούτε μπορεί να περιέχει αυγά, γαλακτοκομικά ή μέλι.</string>
     <string name="paleo">Τα επιτρεπόμενα συστατικά περιλαμβάνουν κρέας (ιδιαίτερα με ζώα που τρέφονται με χόρτα), ψάρι, αυγά, λαχανικά, μερικά έλαια (π.χ. καρύδα και ελαιόλαδο) και σε μικρότερες ποσότητες, φρούτα, ξηρούς καρπούς και γλυκοπατάτες. Επιτρέπονται επίσης το μέλι και το σιρόπι σφενδάμου (δημοφιλές στα επιδόρπια Paleo, αλλά οι αυστηροί οπαδοί του Paleo μπορεί να διαφωνούν). Τα συστατικά που δεν επιτρέπονται περιλαμβάνουν όσπρια (π.χ. φασόλια και φακές), δημητριακά, γαλακτοκομικά, ραφιναρισμένη ζάχαρη και επεξεργασμένα τρόφιμα..</string>
     <string name="primal">Πολύ παρόμοια με το Paleo, εκτός από τα γαλακτοκομικά που επιτρέπονται - σκεφτείτε το ωμό και πλήρες γάλα, το βούτυρο, το γκι κλπ.</string>
@@ -21,4 +25,32 @@
     <string name="search">Αναζήτηση</string>
     <string name="delete_all">Διαγραφή όλων</string>
     <string name="vegan_name">VEGAN</string>
+    <string name="no_instructions">Δυστυχώς, δεν παρέχονται οδηγίες για αυτή τη συνταγή, κάντε κλικ στο κουμπί \'Πηγή\' στην καρτέλα Επισκόπηση.</string>
+    <string name="save_recipe">Αποθήκευση συνταγής</string>
+    <string name="do_you_want_to_taste_something_different">Θέλετε να δοκιμάσετε κάτι διαφορετικό;</string>
+    <string name="no_internet_connection">Δεν υπάρχει σύνδεση στο διαδίκτυο</string>
+    <string name="refresh">Ανανέωση</string>
+    <string name="did_you_know">Γνωρίζατε ότι…</string>
+    <string name="a_joke_for_you">Ένα αστείο για σας</string>
+    <string name="cooking_something_for_you">Μαγειρεύουμε κάτι για εσάς</string>
+    <string name="language">Γλώσσα</string>
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="step">Στάδιο</string>
+    <string name="diet_type">Τύπος διατροφής</string>
+    <string name="search_an_ingredient">Αναζήτηση συστατικού</string>
+    <string name="welcome">Καλώς ορίσατε</string>
+    <string name="app_info_string">Το Meal Finder είναι μια εφαρμογή συνταγών που θα σας δώσει ιδέες για το επόμενο γεύμα σας.</string>
+    <string name="navigate_to_setting_tab">Μετάβαση στις Ρυθμίσεις</string>
+    <string name="customize_recipe_results">Προσαρμόστε τα αποτελέσματα συνταγών</string>
+    <string name="navigate_between_tabs">Navigate between tabs</string>
+    <string name="open_wi_fi_settings">Άνοιγμα ρυθμίσεων Wi-Fi</string>
+    <string name="vegan_details">Vegan</string>
+    <string name="vegeterian">Xορτοφαγικό</string>
+    <string name="dairy_free">Χωρίς γαλακτοκομικά</string>
+    <string name="gluten_free_details">Χωρίς γλουτένη</string>
+    <string name="healthy">Υγιεινό</string>
+    <string name="cheap">Οικονομικό</string>
+    <string name="website">Ιστότοπος:</string>
+    <string name="author">Συντάκτης:</string>
+    <string name="source">Πηγή</string>
 </resources>

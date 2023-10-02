@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FDFDFD"
+    android:background="?attr/background_color"
     tools:context=".ui.fragments.DietInfoFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,7 +20,7 @@
             android:layout_marginTop="24dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
-            android:backgroundTint="@color/my_orange_1"
+            android:backgroundTint="?attr/background_color_orange"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -36,7 +36,7 @@
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/concert_one"
                     android:text="Gluten Free"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/text_color_white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -51,7 +51,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="?attr/cardview_background"
             app:cardCornerRadius="20dp"
             app:cardElevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +68,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/gluten_free"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/text_color_black"
                     android:fontFamily="sans-serif-black"
                     android:textSize="15sp" />
 
@@ -83,7 +83,7 @@
             android:layout_marginTop="24dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="4dp"
-            android:backgroundTint="@color/my_orange_1"
+            android:backgroundTint="?attr/background_color_orange"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_gluten_free_description">
 
@@ -99,7 +99,7 @@
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/concert_one"
                     android:text="Ketogenic"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/text_color_white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -114,7 +114,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="?attr/cardview_background"
             app:cardCornerRadius="20dp"
             app:cardElevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -131,7 +131,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/ketogenic"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/text_color_black"
                     android:fontFamily="sans-serif-black"
                     android:textSize="15sp" />
 
@@ -146,7 +146,7 @@
             android:layout_marginTop="24dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
-            android:backgroundTint="@color/my_orange_1"
+            android:backgroundTint="?attr/background_color_orange"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_ketogenic_description">
 
@@ -162,7 +162,7 @@
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/concert_one"
                     android:text="Vegetarian"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/text_color_white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -177,7 +177,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="?attr/cardview_background"
             app:cardCornerRadius="20dp"
             app:cardElevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -194,7 +194,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/vegetarian"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/text_color_black"
                     android:fontFamily="sans-serif-black"
                     android:textSize="15sp" />
 
@@ -209,7 +209,7 @@
             android:layout_marginTop="24dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
-            android:backgroundTint="@color/my_orange_1"
+            android:backgroundTint="?attr/background_color_orange"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_vegetarian_description">
 
@@ -225,7 +225,7 @@
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/concert_one"
                     android:text="Vegan"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/text_color_white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -240,7 +240,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="?attr/cardview_background"
             app:cardCornerRadius="20dp"
             app:cardElevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -257,7 +257,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/vegan"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/text_color_black"
                     android:fontFamily="sans-serif-black"
                     android:textSize="15sp" />
 
@@ -272,7 +272,7 @@
             android:layout_marginTop="24dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
-            android:backgroundTint="@color/my_orange_1"
+            android:backgroundTint="?attr/background_color_orange"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_vegan_description">
 
@@ -288,7 +288,7 @@
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/concert_one"
                     android:text="Pescetarian"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/text_color_white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -303,7 +303,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="?attr/cardview_background"
             app:cardCornerRadius="20dp"
             app:cardElevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -320,7 +320,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/pescetarian"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/text_color_black"
                     android:fontFamily="sans-serif-black"
                     android:textSize="15sp" />
 
@@ -335,7 +335,7 @@
             android:layout_marginTop="24dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
-            android:backgroundTint="@color/my_orange_1"
+            android:backgroundTint="?attr/background_color_orange"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_pescetarian_description" >
 
@@ -351,7 +351,7 @@
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/concert_one"
                     android:text="Paleo"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/text_color_white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -366,7 +366,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="?attr/cardview_background"
             app:cardCornerRadius="20dp"
             app:cardElevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -383,7 +383,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/paleo"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/text_color_black"
                     android:fontFamily="sans-serif-black"
                     android:textSize="15sp" />
 
@@ -398,7 +398,7 @@
             android:layout_marginTop="24dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
-            android:backgroundTint="@color/my_orange_1"
+            android:backgroundTint="?attr/background_color_orange"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_paleo_description" >
 
@@ -414,7 +414,7 @@
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/concert_one"
                     android:text="Primal"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/text_color_white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -429,7 +429,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="?attr/cardview_background"
             app:cardCornerRadius="20dp"
             app:cardElevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -446,7 +446,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/primal"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/text_color_black"
                     android:fontFamily="sans-serif-black"
                     android:textSize="15sp" />
 
@@ -461,7 +461,7 @@
             android:layout_marginTop="24dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
-            android:backgroundTint="@color/my_orange_1"
+            android:backgroundTint="?attr/background_color_orange"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_primal_description" >
 
@@ -477,7 +477,7 @@
                     android:layout_centerInParent="true"
                     android:fontFamily="@font/concert_one"
                     android:text="Whole30"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/text_color_white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -492,7 +492,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="?attr/cardview_background"
             app:cardCornerRadius="20dp"
             app:cardElevation="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -510,7 +510,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/whole30"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/text_color_black"
                     android:fontFamily="sans-serif-black"
                     android:textSize="15sp" />
 

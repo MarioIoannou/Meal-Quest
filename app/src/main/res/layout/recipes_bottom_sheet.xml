@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white"
+    android:background="?attr/cardview_background"
     tools:context=".ui.fragments.recipes_fragment.bottomsheet.RecipesBottomSheet">
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_marginTop="24dp"
         android:scrollbars="none"
         android:text="Meal Type"
-        android:textColor="@color/black"
+        android:textColor="?attr/text_color_black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,7 +80,7 @@
                     style="@style/ChipStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Main Course" />
+                    android:text="Breakfast" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_sauce"
@@ -159,7 +159,7 @@
         android:layout_marginTop="12dp"
         android:scrollbars="none"
         android:text="Cuisine"
-        android:textColor="@color/black"
+        android:textColor="?attr/text_color_black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -288,8 +288,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
         android:scrollbars="none"
-        android:text="Diet Type"
-        android:textColor="@color/black"
+        android:text="@string/diet_type"
+        android:textColor="?attr/text_color_black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

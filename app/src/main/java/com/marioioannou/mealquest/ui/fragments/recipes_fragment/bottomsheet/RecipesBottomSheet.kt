@@ -80,6 +80,7 @@ class RecipesBottomSheet : BottomSheetDialogFragment() {
         }
 
         binding.btnApply.setOnClickListener {
+            recipesViewModel.backFromBottomSheet = true
             recipesViewModel.saveMealAndDietTypeTemp(mealTypeChip,mealTypeIdChip,dietTypeChip,dietTypeIdChip,cuisineTypeChip,cuisineTypeIdChip)
             //recipesViewModel.saveMealAndDietType (mealTypeChip,mealTypeIdChip,dietTypeChip,dietTypeIdChip)
             val action = RecipesBottomSheetDirections.actionRecipesBottomSheetToRecipesFragment()
