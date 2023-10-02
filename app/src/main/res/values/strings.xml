@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Meal Finder</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recipes">Recipes</string>
+    <string name="my_fridge">My Fridge</string>
+    <string name="saved_recipes">Saved Recipes</string>
+    <string name="food_facts">Food Facts</string>
+    <string name="info_about_diets"><u>Click <font color="#E44745">Here</font> for more information about diets.</u></string>
+
+    <string name="overview">Overview</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="instruction">Instructions</string>
+
+    <string name="gluten_free">Eliminating gluten means avoiding wheat, barley, rye, and other gluten-containing grains and foods made from them (or that may have been cross-contaminated).</string>
+    <string name="ketogenic">The keto diet is based more on the ratio of fat, protein, and carbs in the diet rather than specific ingredients. Generally speaking, high-fat, protein-rich foods are acceptable and high-carbohydrate foods are not. The formula we use is 55–80% fat content, 15–35% protein content, and under 10% of carbohydrates.</string>
+    <string name="vegetarian">No ingredients may contain meat or meat by-products, such as bones or gelatin.</string>
+    <string name="vegan">No ingredients may contain meat or meat by-products, such as bones or gelatin, nor may they contain eggs, dairy, or honey.</string>
+    <string name="pescetarian">Everything is allowed except meat and meat by-products - some pescetarians eat eggs and dairy, some do not.</string>
+    <string name="paleo">Allowed ingredients include meat (especially grass-fed), fish, eggs, vegetables, some oils (e.g. coconut and olive oil), and in smaller quantities, fruit, nuts, and sweet potatoes. We also allow honey and maple syrup (popular in Paleo desserts, but strict Paleo followers may disagree). Ingredients not allowed include legumes (e.g. beans and lentils), grains, dairy, refined sugar, and processed foods.</string>
+    <string name="primal">Very similar to Paleo, except dairy is allowed - think raw and full-fat milk, butter, ghee, etc.</string>
+    <string name="whole30">Allowed ingredients include meat, fish/seafood, eggs, vegetables, fresh fruit, coconut oil, olive oil, small amounts of dried fruit and nuts/seeds. Ingredients not allowed include added sweeteners (natural and artificial, except small amounts of fruit juice), dairy (except clarified butter or ghee), alcohol, grains, legumes (except green beans, sugar snap peas, and snow peas), and food additives, such as carrageenan, MSG, and sulfites.</string>
+    <string name="add_ingredients">Add ingredients</string>
+    <string name="search">Search</string>
+    <string name="delete_all">Delete all</string>
+    <string name="vegan_name">VEGAN</string>
+    <string name="no_instructions">Unfortunately, no instructions are provided for this recipe, please click \'Source\' button in the Overview tab.</string>
+    <string name="save_recipe">Save recipe</string>
+    <string name="do_you_want_to_taste_something_different">Do you want to taste something different?</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="refresh">Refresh</string>
+    <string name="did_you_know">Did you know that…</string>
+    <string name="a_joke_for_you">Here is a joke for you</string>
+    <string name="cooking_something_for_you">Cooking something for you</string>
+    <string name="language">Language</string>
+    <string name="settings">Settings</string>
+    <string name="step">Step</string>
+    <string name="diet_type">Diet Type</string>
+    <string name="search_an_ingredient">Search an ingredient</string>
+    <string name="welcome">Welcome</string>
+    <string name="app_info_string">Meal Finder is a recipe app that will give you ideas for your next meal</string>
+    <string name="navigate_to_setting_tab">Navigate to Setting Tab</string>
+    <string name="customize_recipe_results">Customize recipe results</string>
+    <string name="navigate_between_tabs">Navigate between tabs</string>
+    <string name="open_wi_fi_settings">Open Wi-Fi settings</string>
+    <string name="vegan_details">Vegan</string>
+    <string name="vegeterian">Vegeterian</string>
+    <string name="dairy_free">Dairy Free</string>
+    <string name="gluten_free_details">Gluten Free</string>
+    <string name="healthy">Healthy</string>
+    <string name="cheap">Cheap</string>
+    <string name="website">Website:</string>
+    <string name="author">Author:</string>
+    <string name="source">Source</string>
+</resources>

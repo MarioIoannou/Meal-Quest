@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="red">#DD403A</color>
+    <color name="yellow">#FAC748</color>
+    <color name="green">#7FB069</color>
+
+    <!--Colors Val.1-->
+    <!--<color name="my_red">#E44745</color>
+    <color name="my_light_red">#EBA299</color>
+    <color name="my_very_light_red">#FFF9F3</color>
+    <color name="my_very_light_red2">#FFF3E6</color>
+    <color name="my_very_light_red3">#FFEFEF</color>
+    <color name="my_light_orange_grey">#F7F1EC</color>
+    <color name="my_grey_1">#C5CDD7</color>
+    <color name="my_light_grey">#FFEFEF</color>
+    <color name="my_blueish">#8CADE1</color>-->
+
+    <!--Colors Vol.2-->
+    <!--<color name="my_black_1">#292929</color>
+    <color name="my_black_2">#323232</color>
+    <color name="my_black_3">#3A3A3A</color>
+    <color name="my_grey_1">#4B4A4A</color>
+    <color name="my_grey_2">#5F5E5F</color>
+    <color name="my_grey_3">#8C8C8C</color>
+    <color name="my_light_grey">#BDBDBD</color>
+    <color name="my_yellowish">#FBE6A3</color>
+    <color name="my_yellowish_2">#CFBB82</color>
+    <color name="my_white">#FFFBEE</color>-->
+
+    <!--Colors Vol.3-->
+    <!--<color name="theme_primary">#ed6e06</color>-->
+    <color name="theme_primary">#ed6e06</color>
+    <color name="my_orange_2">#e15c0a</color>
+    <color name="my_light_orange">#FFA65C</color>
+    <color name="my_blue">#0082a6</color>
+    <color name="my_grey">#cdd2da</color>
+    <color name="my_black">#1e1e1e</color>
+    <color name="my_dark_grey">#6c757d</color>
+
+    <!--Chip Colors Vol.1-->
+    <!--<color name="chip_checked">@color/my_yellowish</color>
+    <color name="chip_unchecked">@color/my_light_grey</color>
+    <color name="chip_checked_text">@color/my_black_1</color>
+    <color name="chip_unchecked_text">@color/my_black_1</color>-->
+
+    <!--Chip Colors Vol.2-->
+    <!--<color name="chip_checked">#FFCDC7</color>
+    <color name="chip_unchecked">#FFF1F1</color>
+    <color name="chip_checked_text">#E44745</color>
+    <color name="chip_unchecked_text">#FF000000</color>-->
+
+    <!--Chip Colors Vol.3-->
+    <color name="chip_checked">#FFA65C</color>
+    <color name="chip_unchecked">#EDEDED</color>
+    <color name="chip_checked_text">@color/my_black</color>
+    <color name="chip_unchecked_text">@color/my_black</color>
+
+    <!--Misc Colors-->
+    <color name="my_shimmer_red">#EF8584</color>
+    <color name="my_shimmer_yellowish">#FDEAAE</color>
+    <color name="my_shimmer_orange">#FFE2C1</color>
+
+    <color name="my_dark_black">#1f1d2b</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <!--lightMode colors-->
+    <color name="backgroundColorLight">#FFFFFF</color>
+    <color name="backgroundLayoutColorLight">#F8F8F8</color>
+    <color name="textColorLight">#121212</color>
+    <color name="subTextColorLight">#5F6267</color>
+    <color name="blurIconTintColorLight">#FFFFFF</color>
+    <color name="overview_bg_light">#FFF3E8</color>
+
+    <!--darkMode colors-->
+    <color name="backgroundColorDark">#000000</color>
+    <color name="backgroundLayoutColorDark">#171717</color>
+    <color name="textColorDark">#F2F2F2</color>
+    <color name="subTextColorDark">#9BA0A6</color>
+    <color name="blurIconTintColorDark">#000000</color>
+    <color name="overview_bg_dark">#FFC38B</color>
+
+</resources>

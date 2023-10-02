@@ -1,0 +1,67 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MealQuest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryVariant">@color/theme_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="actionModeBackground">@color/backgroundColorLight</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/theme_primary</item>
+        <item name="colorSecondaryVariant">@color/theme_primary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >@color/backgroundColorDark</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="bottom_navigation_color">@color/backgroundColorDark</item>
+        <item name="toolbar_color">@color/backgroundColorDark</item>
+        <item name="background_color">@color/backgroundColorDark</item>
+        <item name="background_color_orange">@color/theme_primary</item>
+        <item name="editTextBackground">@color/cardview_dark_background</item>
+        <item name="cardview_background">@color/backgroundLayoutColorDark</item>
+        <item name="text_color_black">@color/white</item>
+        <item name="text_color_orange">@color/theme_primary</item>
+        <item name="text_color_blue">@color/my_blue</item>
+        <item name="text_color_white">@color/white</item>
+        <item name="sub_text_color">@color/my_dark_grey</item>
+        <item name="sub_sub_text_color">@color/my_grey</item>
+        <item name="search_color">@color/theme_primary</item>
+        <item name="icon_tint_color">@color/white</item>
+        <item name="fab_tint_color">@color/my_blue</item>
+        <item name="bottom_sheet_background">@color/white</item>
+        <item name="overview_background">@color/overview_bg_dark</item>
+    </style>
+
+    <!--Tab Layout-->
+    <style name="CustomTabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="android:background">@color/backgroundColorDark</item>
+        <item name="tabIndicatorColor">@color/theme_primary</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabSelectedTextColor">@color/backgroundLayoutColorDark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--Tab Layout Text-->
+    <style name="CustomTabTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:background">@color/theme_primary</item>
+    </style>
+
+    <!-- Alert Dialog -->
+    <style name="ThemeOverlay.MaterialComponents.MaterialAlertDialog_Background" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <!-- Background Color-->
+        <item name="android:background">@color/cardview_dark_background</item>
+        <!-- Text Color for title and message -->
+        <item name="colorOnSurface">@color/theme_primary</item>
+        <!-- Style for positive button -->
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="@style/Widget.MaterialComponents.Button">
+        <!-- text color for the button -->
+        <item name="android:textColor">@color/theme_primary</item>
+        <!-- Background tint for the button -->
+        <item name="backgroundTint">@color/backgroundLayoutColorLight</item>
+    </style>
+
+</resources>

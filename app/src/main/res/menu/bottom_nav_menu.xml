@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/recipesFragment"
+        android:icon="@drawable/book"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/fridgeFragment"
+        android:icon="@drawable/fridge"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/favouriteFragment"
+        android:icon="@drawable/baseline_bookmark_black_24dp"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/triviaFragment"
+        android:icon="@drawable/ideas"
+        tools:ignore="MenuTitle" />
+</menu>
